@@ -7,69 +7,92 @@
   </head>
   <body>
     <header>
-      <p>Setup</p>
-      <nav>
-        <ol>
-          <li>
-            <a href="#google-chrome">
-              Google Chrome
-            </a>
-          </li>
-          <li>
-            <a href="#vsc">
-              Visual Estudio Code
-            </a>
-          </li>
-          <li>
-            <a href="#figma">
-              Figma
-            </a>
-          </li>
-          <li>
-            <a href="#github">
-              GitHub
-            </a>
-          </li>
-        </ol>
-      </nav>
-      <p>Conceptos esenciales del Desarrollo Web</p>
-      <nav>
-        <ol>
-          <li>
-            <a href="#que-es-html">
-              Qué es HTML
-            </a>
-          </li>
-          <li>
-            <a href="#etiquetas">
-              Etiquetas
-            </a>
-          </li>
-          <li>
-            <a href="#dom">
-              DOM
-            </a>
-          </li>
-          <li>
-            <a href="#semantica">
-              Semántica
-            </a>
-          </li>
-          <li>
-            <a href="#atributos">
-              Atributos
-            </a>
-          </li>
-          <li>
-            <a href="#css">
-              Qué es CSS
-            </a>
-          </li>
-        </ol>
-      </nav>
+        <details open>
+          <summary>
+            Setup
+          </summary>
+          <nav>
+            <ol>
+              <li>
+                <a href="#google-chrome">
+                  Google Chrome
+                </a>
+              </li>
+              <li>
+                <a href="#vsc">
+                  Visual Estudio Code
+                </a>
+              </li>
+              <li>
+                <a href="#figma">
+                  Figma
+                </a>
+              </li>
+              <li>
+                <a href="#github">
+                  GitHub
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </details>
+        <details>
+          <summary>
+            Conceptos esenciales del Desarrollo Web
+          </summary>
+          <nav>
+            <ol>
+              <li>
+                <a href="#que-es-html">
+                  Qué es HTML
+                </a>
+              </li>
+              <li>
+                <a href="#etiquetas">
+                  Etiquetas
+                </a>
+              </li>
+              <li>
+                <a href="#dom">
+                  DOM
+                </a>
+              </li>
+              <li>
+                <a href="#semantica">
+                  Semántica
+                </a>
+              </li>
+              <li>
+                <a href="#atributos">
+                  Atributos
+                </a>
+              </li>
+              <li>
+                <a href="#css">
+                  Qué es CSS
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </details>
+
+<!-- funcion en JS para que se cierre el menu desplegable/de arriba en el header/ que no estoy clickeando -->
+    <script>
+      const $detailsList = document.querySelectorAll ('details')
+      $detailsList.forEach(($details) => {
+        $details.querySelector ('summary').addEventListener('click',expand)
+      });
+      function expand (){
+        $detailsList.forEach(($details) => {
+          $details.removeAttribute ('open')
+        })
+      }
+
+    </script>
+
     </header>
-    <h1>
-      Curso esencial de HTML y CSS
+        <h1>
+          Curso esencial de HTML y CSS
     </h1>
       <p>
         Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML y CSS para la creación de contenidos, en el nivel 2 aprenderás de componentes y en 3 sobre layouts.
